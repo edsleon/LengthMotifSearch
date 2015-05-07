@@ -6,10 +6,8 @@ import proyecto.Individuo;
 import proyecto.Poblacion;
 import proyecto.SeleccionPadres;
 
-//package proyecto;
 
-
-/**
+/**VERSION 3
  * @author Edson
  */
 public class Proyecto {
