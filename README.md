@@ -1,2 +1,0 @@
-# LengthMotifSearch
-LengthMotifSearch
