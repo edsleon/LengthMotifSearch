@@ -85,7 +85,7 @@ public class Poblacion
      */
     public void Imprimirpoblacion() 
     {
-        Individuo mejorind=new Individuo("", file);
+        Individuo mejorind=new Individuo("KKK", file);
         for(int i=0;i<n;i++)
         {
         	System.out.println(poblacion[i].getcromosoma()+"\t"+poblacion[i].getPeso());
@@ -124,7 +124,7 @@ public class Poblacion
 	                case 3:
 	                    ind=ind.concat("A");break;
 	                case 4:
-	                    ind=ind.concat("U");break;
+	                    ind=ind.concat("T");break;
 	            }
 	        }
 	        poblacion[i]=new Individuo(ind, file); 

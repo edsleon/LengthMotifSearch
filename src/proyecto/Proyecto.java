@@ -6,21 +6,23 @@ import proyecto.Individuo;
 import proyecto.Poblacion;
 import proyecto.SeleccionPadres;
 
+//package proyecto;
 
-/**VERSION 3
+
+/**
  * @author Edson
  */
 public class Proyecto {
-	static private int n=10; //TAMAÑO DE LA POBLACION
+	static private int n=40; //TAMAÑO DE LA POBLACION
 	static private int m=n/2; //CANTIDAD DE OPERACIONES GENETICAs   
 	static private Individuo[] poblaciontemporal=new Individuo[n]; //SE GENERA LA POBLACION INICIAL
 	static private int posiciontemporal=0;
         static Random rd=new Random();
-        static int generaciones=10;
+        static int generaciones=5;
         
         static String padre1;
         static String padre2;
-        static String file="C:\\datos.txt";
+        static String file="C:\\Clusters_filtered.txt";
         static private Poblacion poblacion=new Poblacion(n,file); //SE GENERA LA POBLACION INICIAL
         static SeleccionPadres selecciondepadres=new SeleccionPadres(poblacion);
     static int contador=0;
@@ -38,9 +40,9 @@ public class Proyecto {
         {
         	System.out.println(i + 1);
     		Iteraciones();
-        	
+        	poblacion.Imprimirpoblacion();
         }
-        poblacion.Imprimirpoblacion();
+       
         
         
     }
@@ -78,7 +80,7 @@ public class Proyecto {
  
     	poblacion.setPoblacion(poblaciontemporal);
         selecciondepadres.setPoblacion(poblaciontemporal);
-        poblacion.Imprimirpoblacion();  
+       // poblacion.Imprimirpoblacion();  
 	}
 	
     /**

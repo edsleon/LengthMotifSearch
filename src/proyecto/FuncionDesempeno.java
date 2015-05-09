@@ -12,6 +12,7 @@ package proyecto;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 
 public class FuncionDesempeno 
@@ -71,21 +72,23 @@ public class FuncionDesempeno
             fr = new FileReader (archivo);
             br = new BufferedReader(fr);
             linea = br.readLine();
-            
-            
+           // int co=0;
             
             while((this.linea=br.readLine())!=null)
             {
 	            ////////////////////////////////////////////////////////////////////////////////
-            	String[] read = linea.split(" ");
+            	String[] read = linea.split("\t");
             	reads++;
-            	
-            	if(read.length > 12)
-            	{
-            		
+            	//System.out.println(read[0]+" var "+co);
+                try
+                {
+                //if(read[8]==null)
+            	//{co=co+1;
+                	
 		            for(int j=0;j<read[8].length();j++) // CICLO PARA ENCONTRAR CONCURRENCIAS Y SUMAR MUTACIONES
 		            {
 			            pos=read[8].indexOf(this.individuo,pos+j); //FUNCION QUE BUSCA CONCURRENCIAS ENTRE CADENAS
+			            
 			            if(pos==-1) //SI NO ENCUENTRA EN TODA LA CADENA SALE DEL CICLO
 			            {
 			                break;
@@ -100,11 +103,17 @@ public class FuncionDesempeno
 		            {
 		               mutacion=mutacion+( Integer.parseInt(read[9])); 
 		               longitudes = longitudes + read[8].length();
+		               
 		            }
 		            auxbandera=0;
 	                ////////////////////////////////////////////////////////////////////////////////               
             
-            	}
+                }
+                
+                catch(Exception e)
+                {
+                            continue;
+                }
             }
         }
         catch(Exception e){
@@ -124,13 +133,13 @@ public class FuncionDesempeno
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-        if(cont==0)
+        if(longitudes==0)
         {
             this.peso=cont;   
         }
         else
         {
-        	this.peso=((mutacion/longitudes) * 0.5) + ((cont / reads) / 0.5);   
+        	this.peso=((mutacion/longitudes) * 0.5) + ((cont/reads) * 0.5);   
         }
 	}
 	double getPeso()
