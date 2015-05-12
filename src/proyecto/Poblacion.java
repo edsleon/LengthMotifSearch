@@ -14,7 +14,7 @@ package proyecto;
 //package proyecto;
 /**
  *
- * @author Edson
+ * @author Eng. (C) Edson David Leon - MSc. Carlos Andrés Sierra
  */
 public class Poblacion 
 {

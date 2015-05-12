@@ -22,7 +22,7 @@ import proyecto.SeleccionPadres;
 
 
 /**
- * @author Edson
+ * @author Eng. (C) Edson David Leon - MSc. Carlos Andrés Sierra
  */
 public class Proyecto {
 	static private int n=40; //TAMAÑO DE LA POBLACION

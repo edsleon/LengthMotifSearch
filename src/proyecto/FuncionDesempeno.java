@@ -14,7 +14,7 @@ package proyecto;
 
 /**
  *
- * @author Edson
+ * @author Eng. (C) Edson David Leon - MSc. Carlos Andrés Sierra
  */
 import java.io.BufferedReader;
 import java.io.File;

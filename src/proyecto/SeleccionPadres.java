@@ -17,7 +17,7 @@ import java.util.Random;
 
 /**
  *
- * @author Edson
+ * @author Eng. (C) Edson David Leon - MSc. Carlos Andrés Sierra
  */
 public class SeleccionPadres 
 {
