@@ -18,13 +18,12 @@ import proyecto.Individuo;
 import proyecto.Poblacion;
 import proyecto.SeleccionPadres;
 
-//package proyecto;
-
 
 /**
  * @author Eng. (C) Edson David Leon - MSc. Carlos Andrés Sierra
  */
-public class Proyecto {
+public class Main {
+	
 	static private int n=40; //TAMAÑO DE LA POBLACION
 	static private int m=n/2; //CANTIDAD DE OPERACIONES GENETICAs   
 	static private Individuo[] poblaciontemporal=new Individuo[n]; //SE GENERA LA POBLACION INICIAL
